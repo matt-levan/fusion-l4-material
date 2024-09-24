@@ -1,0 +1,30 @@
+name = "rhel8-vmlab"
+description = "Red Hat Enterprise Linux 8 for Fusion Red Hat OpenShift Virtualization lab"
+version = "1.0.0"
+
+[customizations]
+hostname = "rhel8-vmlab"
+
+[[packages]]
+name = "qemu-guest-agent"
+
+[customizations.services]
+enabled = ["qemu-guest-agent" , "serial-getty@ttyS0"]
+
+[[customizations.user]]
+name = "labuser"
+description = "Lab user"
+password = "Passw0rd"
+home = "/home/labuser"
+shell = "/bin/bash"
+groups = [ "users", "wheel" ]
+uid = 1000
+gid = 1000
+
+[[customizations.group]]
+name = "labuser"
+gid = 1000
+
+[[image_requests]]
+architecture = "x86_64"
+image_type = "vsphere-ova"
