@@ -80,7 +80,7 @@ objects:
     kind: VirtualMachine
     metadata:
       annotations:
-        name.os.template.kubevirt.io/centos-stream9: CentOS 8 or higher
+        name.os.template.kubevirt.io/centos-stream9: CentOS 9 or higher
         openshift.io/display-name: MongoDB Virtual Machine 
       labels:
         app: ${APPLICATION_NAME}
