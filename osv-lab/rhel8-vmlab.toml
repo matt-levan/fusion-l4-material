@@ -1,6 +1,6 @@
 name = "rhel8-vmlab"
 description = "Red Hat Enterprise Linux 8 for Fusion Red Hat OpenShift Virtualization lab"
-version = "1.0.0"
+version = "2.0.0"
 
 [customizations]
 hostname = "rhel8-vmlab"
@@ -8,8 +8,14 @@ hostname = "rhel8-vmlab"
 [[packages]]
 name = "qemu-guest-agent"
 
+[[packages]]
+name = "httpd"
+
 [customizations.services]
-enabled = ["qemu-guest-agent" , "serial-getty@ttyS0"]
+enabled = ["qemu-guest-agent", "serial-getty@ttyS0", "httpd"]
+
+[customizations.firewall.services]
+enabled = ["ssh", "http", "cockpit", "dhcpv6-client"]
 
 [[customizations.user]]
 name = "labuser"
