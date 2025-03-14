@@ -3,11 +3,11 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: 'system:openshift:scc:anyuid'
-  namespace: my-robot-shop
+  namespace: {{namespace}}
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: my-robot-shop
+    namespace: {{namespace}}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
