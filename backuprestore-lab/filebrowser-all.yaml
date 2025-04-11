@@ -9,6 +9,7 @@ metadata:
     app.kubernetes.io/part-of: filebrowser-app
   name: files
 spec:
+  storageClassName: ocs-storagecluster-ceph-rbd
   accessModes:
     - ReadWriteOnce
   resources:
@@ -27,6 +28,7 @@ metadata:
     app.kubernetes.io/part-of: filebrowser-app
   name: filebrowser-config
 spec:
+  storageClassName: ocs-storagecluster-ceph-rbd
   accessModes:
     - ReadWriteOnce
   resources:
