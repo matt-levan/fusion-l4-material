@@ -31,7 +31,7 @@ spec:
         app: mongodb
     spec:
       containers:
-      - image: bitnami/mongodb:5.0.24-debian-11-r20
+      - image: bitnamilegacy/mongodb:5.0.24-debian-11-r20
         name: mongodb
         ports:
         - name: mongodb
