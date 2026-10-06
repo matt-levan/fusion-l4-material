@@ -81,6 +81,9 @@ spec:
       containers:
       - image: quay.io/jpacker/nodejs-pacman-app:latest
         name: pacman
+        env:
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
         ports:
         - containerPort: 8080
           name: http-server
